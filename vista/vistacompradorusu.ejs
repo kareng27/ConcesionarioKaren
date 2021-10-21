@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vistacomprador.css">
+    <title>Comprador</title>
+</head>
+<body>
+    <header id="encabezado">
+        <div class="nav">
+            <input type="checkbox">
+              <span></span>
+              <span></span>
+              <div class="menu">
+                <li><a href="/vehiculos">Vehiculos</a></li>
+                <li><a href="/datospevendedor">Datos</a></li>
+                <li><a href="/vistausuario">Volver</a></li>
+              </div>
+          </div>
+        <div class="cuadro">
+            <p><%= uss %></p>
+            <img src="img/logo_small_icon_only.png" alt="">
+            <a href="cerrar">Cerrar sesion</a>
+        </div>
+        </div>
+    </header>
+
+    <section class="contenedor">
+        <div class="caja"><a href="/categoriascomprausu">Consulta por categoria</a></div>
+        <div class="caja"><a href="/rangopreciousu">Consulta por precio</a></div>
+    </section>
+</body>
+</html>

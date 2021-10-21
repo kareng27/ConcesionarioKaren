@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<body>
+
+    <header id="encabezado">
+        <div class="nav">
+            <input type="checkbox">
+              <span></span>
+              <span></span>
+              <div class="menu">
+                <li><a href="/datospersonales">datos personales</a></li>
+                <li><a href="/usuario">Usuario</a></li>
+              </div>
+          </div>
+        <div class="cuadro">
+            <p><%= uss %></p>
+            <img src="img/logo_small_icon_only.png" alt="">
+            <a href="cerrar">Cerrar sesion</a>
+        </div>
+        </div>
+    </header> 
+
+    <form class="form-box animated fadeInUp" action="/frminsertarusuario" method="POST">
+        <h1 class="form-title">Usuario</h1>
+        <input type="text" placeholder="Id" name="UsuId" id="documento" required>
+        <input type="text" placeholder="Usuario" name="UsuLogin" id="usuario" required>
+        <input type="password" placeholder="contraseña" name="UsuPassword" id="password" required>
+        <input type="text" placeholder="Rol" name="UsuRolTipo" id="rol" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+   <section class=""></section>
+
+    <from action="" name="frm" id="frm">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>USUARIO</th>
+                    <th>CONTRASEÑA</th>
+                    <th>TIPO ROL</th>
+                    <th>ACTUALIZAR</th>
+                    <th>ELIMINAR</th>
+                </tr>
+            </thead>
+
+            <tbody>
+             <% datos.forEach(function (datos){ %>    
+                <tr>
+                    <td><input type="text" value="<%=datos.UsuId%>" name="usid" id="usid" class="usid"></td>
+                    <td><input type="text" value="<%=datos.UsuLogin%>" name="log" id="log" class="log"></td>
+                    <td><input type="text" value="<%=datos.UsuPassword%>" name="pas" id="pas" class="pas"></td>
+                    <td><input type="text" value="<%=datos.UsuRolTipo%>" name="rol" id="rol" class="rol"></td>
+                    <td><input type="submit" value="Actualizar" name="btnact" id="btnact" class="btnact"></td>
+                    <td><input type="submit" value="Eliminar" name="btneli" id="btneli" class="btneli"></td>
+                </tr>
+             <%})%>
+            </tbody>
+        </table>
+    </from>
+
+</body>
+
+</html>

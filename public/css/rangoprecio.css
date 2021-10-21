@@ -1,0 +1,235 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /*background : linear-gradient(rgb(251,248,242),rgb(140,177,162));*/
+    background: url("../img/fondo.png") no-repeat center center/cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* No Scrollbar */
+    overflow: auto;
+}
+
+
+
+/* HEADER */
+#encabezado{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+	height: 80px;
+	width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+.cuadro{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(34,83,78);
+    /*width: 18%;*/
+    width: auto;
+    height: 60px;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    border-radius: 15px;
+    margin-right: 5%;
+}
+
+.cuadro img{
+    margin: 4px;
+    height: 45px;
+    width: 20%;
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+}
+
+.cuadro p{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(251,248,242);
+}
+
+.cuadro a{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(251,248,242);
+}
+
+.cuadro a:hover{
+    background-color: rgb(251,248,242);
+    color: rgb(34,83,78);
+    border-radius: 15px;
+}
+
+.nav, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    position: relative;
+    background-color: rgb(251,248,242);
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    margin-left: 3%;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ .menu {
+    width: 250px;/*CONTROLA EL ANCHO DEL MENU CUANDO ESTA ABIERTO*/
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(140,177,162);
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: rgb(34,83,78);
+}
+
+.nav input {/*EL TAMAÑO DEL CIRCULO */
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.nav span {
+    position: absolute;
+    left: 16px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: rgb(34,83,78);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ span {
+    background-color: rgb(34,83,78);
+}
+
+.nav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.nav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.nav span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+/*CIERRE HEADR*/
+
+/*LOGIN*/
+
+.form-box {
+    width: 310px;
+    padding: 40px;
+    background: rgb(34,83,78);
+    text-align: center;
+    border-radius: 35px;
+    box-shadow: 10px solid rgba(0,0,0,.2);
+}
+
+.form-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form-box input[type="text"], .form-box input[type="password"], .form-box button[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(140,177,162);
+    padding: 14px 10px;
+    width: 280px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+/*
+.form-box input[type="text"]:focus, .form-box input[type="password"]:focus {
+    width: 280px;
+    border-color: rgb(140,177,162);
+}*/
+
+.form-box button[type="submit"] {
+    border: 0;
+    background: rgb(140,177,162);
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(140,177,162);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.form-box button[type="submit"]:hover {
+    background: none;
+    color: white;
+}
+
+/*CIERRE LOGIN*/
+
+th{
+    background-color: rgb(34,83,78);
+}
+
+input{
+    border: none;
+    background-color: rgb(140,177,162);
+}
+
+
+.table{
+    background-color: rgb(34,83,78);
+    margin-left: 2.5%;
+    margin-top: 3%;
+}
+
+button a {
+    text-decoration: none;
+    color: rgb(34,83,78);
+}

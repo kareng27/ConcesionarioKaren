@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Datos</title>
+    <link rel="stylesheet" href="css/datospersonales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<body>
+
+    <header id="encabezado">
+        <div class="nav">
+            <input type="checkbox">
+              <span></span>
+              <span></span>
+              <div class="menu">
+                <li><a href="/datospersonales">datos personales</a></li>
+                <li><a href="/usuario">Usuario</a></li>
+              </div>
+          </div>
+        <div class="cuadro">
+            <p><%= uss %></p>
+            <img src="img/logo_small_icon_only.png" alt="">
+            <a href="cerrar">Cerrar sesion</a>
+        </div>
+        </div>
+    </header>
+
+    <form class="form-box animated fadeInUp" action="/frminsertardatos" method="POST">
+        <h1 class="form-title">Datos personales</h1>
+        <input type="text" placeholder="Id"        name="DatId"       id="id" required>
+        <input type="text" placeholder="Nombre"    name="DatNombre"   id="Nombre" required>
+        <input type="text" placeholder="Apellido"  name="DatApellido" id="Apellido" required>
+        <input type="text" placeholder="Tipo id"   name="DatTipoId"   id="tipid" required>
+        <input type="text" placeholder="Numero id" name="DatNumeroId" id="numid" required>
+        <input type="text" placeholder="Telefono"  name="DatTelefono" id="Telefono" required>
+        <input type="text" placeholder="Correo"    name="DatCorreo"   id="Correo" required>
+        <button type="submit" >Enviar</button>
+    </form>
+</body>
+
+<section class=""></section>
+
+<from action="" name="frm" id="frm">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>APELLIDO</th>
+                <th>TIPO ID</th>
+                <th>NUMERO ID</th>
+                <th>TELEFONO</th>
+                <th>CORREO</th>
+            </tr>
+        </thead>
+
+        <tbody>
+         <% datos.forEach(function (datos){ %>    
+            <tr>
+                <td><input type="text" value="<%=datos.DatId%>" name="daid" id="daid" class=daid"></td>
+                <td><input type="text" value="<%=datos.DatNombre%>" name="nom" id="nom" class="nom"></td>
+                <td><input type="text" value="<%=datos.DatApellido%>" name="ape" id="ape" class="ape"></td>
+                <td><input type="text" value="<%=datos.DatTipoId%>" name="tip" id="tip" class="tip"></td>
+                <td><input type="text" value="<%=datos.DatNumeroId%>" name="num" id="num" class="num"></td>
+                <td><input type="text" value="<%=datos.DatTelefono%>" name="tel" id="tel" class="tel"></td>
+                <td><input type="text" value="<%=datos.DatCorreo%>" name="cor" id="cor" class="cor"></td>                
+            </tr>
+         <%})%>
+        </tbody>
+    </table>
+</from>
+
+</html>

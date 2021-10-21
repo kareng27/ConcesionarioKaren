@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Datos</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/actualizardatven.js"></script>
+    <link rel="stylesheet" href="css/datospevendedor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<body>
+
+    <header id="encabezado">
+        <div class="nav">
+            <input type="checkbox">
+              <span></span>
+              <span></span>
+              <div class="menu">
+                <li><a href="/vehiculosusu">Vehiculos</a></li>
+                <li><a href="/datosvendedorusu">Datos</a></li>
+              </div>
+          </div>
+        <div class="cuadro">
+            <p><%= uss %></p>
+            <img src="img/logo_small_icon_only.png" alt="">
+            <a href="cerrar">Cerrar sesion</a>
+        </div>
+        </div>
+    </header>
+
+    <h1>Datos personales</h1>
+
+<from action="" name="frm" id="frm">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>NOMBRE</th>
+                <th>APELLIDO</th>
+                <th>TELEFONO</th>
+                <th>CORREO</th>
+                <th>ACTUALIZAR</th>
+            </tr>
+        </thead>
+
+        <tbody>
+         <% datos.forEach(function (datos){ %>    
+            <tr>
+                <input type="hidden" value="<%=datos.DatId%>" name="daid" id="daid" class="daid">
+                <td><input type="text" value="<%=datos.DatNombre%>" name="nom" id="nom" class="nom"></td>
+                <td><input type="text" value="<%=datos.DatApellido%>" name="ape" id="ape" class="ape"></td>
+                <td><input type="text" value="<%=datos.DatTelefono%>" name="tel" id="tel" class="tel"></td>
+                <td><input type="text" value="<%=datos.DatCorreo%>" name="cor" id="cor" class="cor"></td>
+                <td><input type="submit" value="Actualizar" name="btnact" id="btnact" class="btnact"></td>                
+            </tr>
+         <%})%>
+        </tbody>
+    </table>
+</from>
+
+</html>

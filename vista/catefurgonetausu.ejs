@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furgoneta</title>
+    <link rel="stylesheet" href="css/catecamioneta.css">
+</head>
+<body>
+
+    <header id="encabezado">
+        <div class="nav">
+            <input type="checkbox">
+              <span></span>
+              <span></span>
+              <div class="menu">
+                <li><a href="/categoriascomprausu">volver</a></li>
+              </div>
+          </div>
+        <div class="cuadro">
+            <p><%= uss %></p>
+            <img src="img/logo_small_icon_only.png" alt="">
+            <a href="cerrar">Cerrar sesion</a>
+        </div>
+        </div>
+    </header>
+    
+    <from action="" name="frm" id="frm">
+        <section class="scroll">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>MODELO</th>
+                    <th>MARCA ID</th>
+                    <th>COLOR</th>
+                    <th>ESTADO</th>
+                    <th>PRECIO</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+             <% datos.forEach(function (datos){ %>    
+                <tr>
+                    <input type="hidden" value="<%=datos.VehPlaca%>" name="daid" id="daid" class="daid">
+                    <input type="hidden" value="<%=datos.VehCatId%>" name="ape" id="ape" class="ape">
+                    <td><input type="text" value="<%=datos.VehModelo%>" name="tip" id="tip" class="tip"></td>
+                    <td><input type="text" value="<%=datos.VehMarca%>" name="num" id="num" class="num"></td>
+                    <td><input type="text" value="<%=datos.VehColor%>" name="tel" id="tel" class="tel"></td>
+                    <td><input type="text" value="<%=datos.VehEstado%>" name="cor" id="cor" class="cor"></td>                
+                    <td><input type="text" value="<%=datos.VehPrecio%>" name="cor" id="cor" class="cor"></td> 
+                   <!-- <td><button><a href="#">Ver datos del vendedor</a></button></td>-->
+                  
+                </tr>
+             <%})%>
+            </tbody>
+        </table>
+    </section>
+    </from>
+</body>
+</html>

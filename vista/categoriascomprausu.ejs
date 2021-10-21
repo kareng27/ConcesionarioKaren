@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vehiculos</title>
+    <link rel="stylesheet" href="css/categoriascompra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<body>
+
+    <header id="encabezado">
+        <div class="nav">
+            <input type="checkbox">
+              <span></span>
+              <span></span>
+              <div class="menu">
+                <li><a href="/vistacompradorusu">volver</a></li>
+              </div>
+          </div>
+        <div class="cuadro">
+            <p><%= uss %></p>
+            <img src="img/logo_small_icon_only.png" alt="">
+            <a href="cerrar">Cerrar sesion</a>
+        </div>
+        </div>
+    </header>
+
+<!--TABLA DE CATEGORIAS-->
+<table class="datos">
+      
+    <thead>
+      <tr>      
+        <th colspan="2" scope="rowgroup" class="tit-cate">Categorias</th>  
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr class="cuadros">
+        <td>Camioneta</td>
+        <td><button><a href="/catecamionetausu">Ver mas</a></button></td>
+    </tr>
+
+      <tr class="cuadros">
+        <td>Urbano</td>
+        <td><button><a href="/cateurbanousu">Ver mas</a></button></td>
+      </tr>
+
+      <tr class="cuadros">
+        <td>Deportivo</td>
+        <td><button><a href="/catedeportivousu">Ver mas</a></button></td>
+      </tr>
+
+      <tr class="cuadros">
+        <td>Furgoneta</td>
+        <td><button><a href="/catefurgonetausu">Ver mas</a></button></td>
+      </tr>
+
+    </tbody> 
+  </table>
+<!--CIERRE TABLA DE CATEGORIAS-->
+
+<section class="contenedor-imagenes">
+    <div class="caja" id="caja1"></div>
+    <div class="caja" id="caja2"></div>
+    <div class="caja" id="caja3"></div>
+    <div class="caja" id="caja4"></div>
+</section>
+
+</body>
+
+</html>
